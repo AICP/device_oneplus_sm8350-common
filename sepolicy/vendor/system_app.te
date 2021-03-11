@@ -1,0 +1,2 @@
+allow system_app vendor_sysfs_usb_supply:dir { search open read getattr };
+allow system_app vendor_sysfs_usb_supply:file { search open read getattr };
