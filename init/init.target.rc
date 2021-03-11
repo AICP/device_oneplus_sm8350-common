@@ -90,6 +90,15 @@ on post-fs
 
 on late-fs
     mount_all --late
+ # Battery Health
+    chown system system /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/charge_full_design
+    chmod 0644 /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/charge_full_design
+    chown system system /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/charge_counter
+    chmod 0644 /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/charge_counter
+    chown system system /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/cycle_count
+    chmod 0644 /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/cycle_count
+    chown system system /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/health
+    chmod 0644 /sys/devices/platform/soc/soc:oplus,chg_intf/oplus_chg/battery/health
 
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
